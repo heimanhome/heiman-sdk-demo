@@ -1,0 +1,66 @@
+Heiman Smart Home SDK Demo (heiman-sdk-demo)
+Copyright 2022-2026 Heiman
+https://www.heimanhome.com
+
+This product includes software developed by Heiman.
+
+===============================================================================
+SCOPE OF THE APACHE LICENSE
+===============================================================================
+
+The Apache License, Version 2.0 (see LICENSE) applies ONLY to:
+
+  * Java source code under src/main/java/
+  * The resource template src/main/resources/sdk-config.properties
+  * Documentation (README.md, doc/*.md, CHANGELOG.md, RELEASE_NOTES.md)
+  * The build descriptor pom.xml and .gitignore
+
+The following are NOT covered by the Apache License. They remain the property
+of Heiman (all rights reserved) and are provided solely for building and
+running this demonstration project under the applicable Heiman SDK agreement:
+
+  * libs/heiman-sdk-mqtt-1.0.4.jar
+  * libs/heiman-sdk-restful-1.0.4.jar
+    Proprietary SDK binaries containing the SDK classes only; all third-party
+    dependencies are resolved by Maven from pom.xml. Reverse engineering,
+    decompilation, redistribution outside this repository, and commercial
+    reuse require a separate written licence from Heiman.
+  * image/img.png and image/img_1.png (SDK integration flow diagrams)
+  * The Heiman IoT platform, its endpoints, and the appId / secureKey
+    credentials issued by it
+
+For a public open-source release, remove these two jars from the public
+repository (or replace them with Maven coordinates served from an authorised
+artifact repository) before publication. For a private release the same scope
+applies to the permitted internal audience.
+
+===============================================================================
+THIRD-PARTY COMPONENTS (THIRD-PARTY-NOTICES)
+===============================================================================
+
+Direct dependencies declared in pom.xml (informational; consult each upstream
+project for the authoritative licence text):
+
+  Component                                   Version     Licence
+  ------------------------------------------  ----------  ---------------------
+  OkHttp (com.squareup.okhttp3)               4.10.0      Apache-2.0
+  Retrofit / converter-gson                   2.9.0       Apache-2.0
+  Gson (com.google.code.gson)                 2.8.9       Apache-2.0
+  Eclipse Paho MQTT client                    1.2.5       EPL-1.0 / EDL-1.0
+  SLF4J API                                   1.7.36      MIT
+  Logback Classic                             1.2.13      EPL-1.0 / LGPL-2.1
+  Lombok                                      1.18.38     MIT (provided scope)
+  fastjson (com.alibaba)                      2.0.58      Apache-2.0
+
+Transitive components (notably Kotlin stdlib, Apache-2.0, pulled in by OkHttp)
+are enumerated in sbom.json. The libs/ jars contain Heiman SDK classes only and
+do not bundle third-party code; third-party licences therefore apply to the
+Maven artifacts resolved from public repositories.
+
+Generate or refresh the machine-readable CycloneDX SBOM with:
+
+    mvn -P sbom package        # writes target/bom.json
+
+Apache-2.0, EPL and LGPL require the corresponding licence text and attribution
+notices to be retained on redistribution; keep LICENSE and this NOTICE alongside
+any copy or derivative of this repository.

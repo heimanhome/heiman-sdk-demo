@@ -1,0 +1,51 @@
+# Build output
+target/
+out/
+*.class
+
+# IDE / editor
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Local credentials and secrets (never commit these)
+.env
+.env.*
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.pem
+*.key
+*credentials*.properties
+sdk-config.local.properties
+sdk-config.properties.bak
+application-local.yml
+bootstrap-local.yml
+# NOTE: src/main/resources/sdk-config.properties is intentional - it contains
+# placeholders only (YOUR_APP_ID / YOUR_SECURE_KEY) and must stay tracked.
+
+# Logs, temp files and archives
+*.log
+*.tmp
+hs_err_pid*
+*.zip
+*.pkg
+*.tar.gz
+*.tgz
+
+# Maven leftovers
+pom.xml.versionsBackup
+release.properties
+
+# Binary policy: ignore stray jars, but keep the two SDK jars required by
+# the system-scope dependencies in pom.xml so a fresh clone can build.
+*.jar
+!libs/
+!libs/*.jar
