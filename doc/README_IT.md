@@ -360,7 +360,7 @@ Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 
 ## 11. Supporto tecnico
 
-- **E-mail:** heimanapp1@heiman.cn
+- **E-mail:** help@heimanhome.com.cn
 - **Sito web:** https://www.heimanhome.com
 
 ## 12. Cronologia delle versioni e licenza
